@@ -1,0 +1,36 @@
+---
+- name: Setup Servers
+  hosts: all
+  tasks:
+  - name: Update timezone
+    file:
+      src: /usr/share/zoneinfo/UTC
+      dest: /etc/localtime
+      state: link
+
+  - name: Ensure firewalld is enabled and running
+    service:
+      name: firewalld
+      state: started
+      enabled: true
+
+  - name: Ensure chrony is installed
+    dnf:
+      name: chrony
+      state: latest
+
+  - name: Ensure chronyd is enabled
+    service:
+      name: chronyd
+      state: started
+      enabled: true
+
+- import_playbook: sethostname.yml
+
+- import_playbook: pophosts.yml
+
+- import_playbook: copyfiles.yml
+
+- import_playbook: reboot.yml
+...
+

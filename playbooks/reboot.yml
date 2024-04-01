@@ -1,0 +1,8 @@
+---
+- name: Reboot device(s)
+  hosts: all
+  tasks:
+  - name: Reboot
+    reboot:
+      reboot_timeout: 120
+...

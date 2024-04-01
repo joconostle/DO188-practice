@@ -1,0 +1,22 @@
+# Use docker.io/node image, version 21-alpine
+
+
+# Create work directory /usr/src/app
+
+
+# Copy the package.json, and package-lock.json files to the work directory
+# A wildcard can be used to ensure all .json files are copied
+
+
+# Install node packages
+# You can use npm install
+
+
+# Copy the app.js file to the work directory
+
+
+# Expose port 8080
+
+
+# Set npm start as the starting command
+

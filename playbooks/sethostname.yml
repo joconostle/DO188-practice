@@ -1,0 +1,8 @@
+---
+- name: Setting up hostname
+  hosts: all
+  tasks:
+  - name: Setting hostname
+    hostname:
+      name: "{{ ansible_hostname }}.do188.test"
+...

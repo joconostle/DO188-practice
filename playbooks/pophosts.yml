@@ -1,0 +1,12 @@
+---
+- name: Populate hosts file with entries
+  hosts: all
+  tasks:
+  - name: Add hosts entries
+    template:
+      src: hosts.j2
+      dest: /etc/hosts
+      owner: root
+      group: root
+      mode: 0644
+...

@@ -1,0 +1,2 @@
+[workstation]
+workstation.do188.test ansible_host=192.168.188.188 ansible_user=vagrant ansible_ssh_password=vagrant

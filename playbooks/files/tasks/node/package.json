@@ -1,0 +1,12 @@
+{
+  "name": "demo-app",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "build": "npm install",
+    "start": "node app.js"
+  },
+  "author": "ISC",
+  "license": "ISC"
+}
